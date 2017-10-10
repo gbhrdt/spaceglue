@@ -61,7 +61,7 @@ if [ -n "$DELAY" ]; then
 fi
 
 echo "=> Executing NPM install within Bundle"
-(cd programs/server && npm install)
+(cd programs/server && npm install -d)
 
 echo "=> Starting meteor app"
 node $NODE_OPTIONS main.js

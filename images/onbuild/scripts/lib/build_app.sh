@@ -94,7 +94,7 @@ meteor_version_app=$(cat .meteor/release)
 echo "  > ${meteor_version_app}"
 
 echo "=> Executing NPM install --production"
-$meteor_bin npm install --production
+$meteor_bin npm install --production -d
 
 echo "=> Executing Meteor Build..."
 
@@ -102,7 +102,7 @@ $meteor_bin build \
   --directory $build_dir
 
 echo "=> Executing NPM install within Bundle"
-(cd ${build_dir}/bundle/programs/server/ && npm install)
+(cd ${build_dir}/bundle/programs/server/ && npm install -d)
 
 echo "=> Moving bundle"
 mv ${build_dir}/bundle $HOME/built_app
