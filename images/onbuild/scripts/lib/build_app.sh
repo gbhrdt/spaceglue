@@ -103,7 +103,7 @@ $meteor_bin build \
   --directory $build_dir
 
 echo "=> Executing NPM install within Bundle"
-(cd ${build_dir}/bundle/programs/server/ && npm install -d)
+(cd ${build_dir}/bundle/programs/server/ && npm install -dd)
 
 echo "=> Moving bundle"
 mv ${build_dir}/bundle $HOME/built_app
