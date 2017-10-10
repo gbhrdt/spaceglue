@@ -95,7 +95,7 @@ echo "  > ${meteor_version_app}"
 
 echo "=> Executing NPM install --production"
 $meteor_bin npm cache clean
-$meteor_bin npm config set registry http://registry.npmjs.org/
+$meteor_bin npm config set registry http://registry.cnpmjs.org/
 $meteor_bin npm install --production -dd
 
 echo "=> Executing Meteor Build..."
