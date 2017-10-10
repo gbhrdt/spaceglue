@@ -1,4 +1,4 @@
-FROM abernix/spaceglue:base
+FROM gbhrdt/spaceglue:base
 MAINTAINER Jesse Rosenberger
 
 USER root
