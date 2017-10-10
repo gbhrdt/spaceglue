@@ -94,7 +94,7 @@ meteor_version_app=$(cat .meteor/release)
 echo "  > ${meteor_version_app}"
 
 echo "=> Executing NPM install --production"
-$meteor_bin npm install --production 2>&1 > /dev/null
+$meteor_bin npm install --production
 
 echo "=> Executing Meteor Build..."
 
