@@ -16,10 +16,10 @@ dependencies:
   cache_directories:
     - ../.meteor
 
-test:
-  override:
-    - ./admin/run_tests.sh:
-        parallel: true
+#test:
+#  override:
+#    - ./admin/run_tests.sh:
+#        parallel: true
 
 deployment:
   docker:
