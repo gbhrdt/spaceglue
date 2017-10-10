@@ -95,7 +95,7 @@ echo "  > ${meteor_version_app}"
 
 echo "=> Executing NPM install --production"
 $meteor_bin npm config set registry http://registry.npmjs.org/
-$meteor_bin npm install --production -d
+$meteor_bin npm install --production -dd
 
 echo "=> Executing Meteor Build..."
 
