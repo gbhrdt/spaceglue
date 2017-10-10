@@ -1,4 +1,4 @@
-FROM abernix/spaceglue:builddeps
+FROM gbhrdt/spaceglue:builddeps
 MAINTAINER Jesse Rosenberger
 
 USER root
