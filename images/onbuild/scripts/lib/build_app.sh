@@ -93,10 +93,11 @@ echo "=> App Meteor Version"
 meteor_version_app=$(cat .meteor/release)
 echo "  > ${meteor_version_app}"
 
-echo "=> Executing NPM install --production"
-$meteor_bin npm cache clean
-$meteor_bin npm config set registry http://registry.cnpmjs.org/
-$meteor_bin npm install --production -dd
+echo "=> Installing meteor yarn"
+$meteor_bin npm install -g yarn -dd
+
+echo "=> Executing yarn install --production"
+$meteor_bin yarn install --production --verbose
 
 echo "=> Executing Meteor Build..."
 
