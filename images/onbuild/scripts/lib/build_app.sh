@@ -95,7 +95,7 @@ echo "  > ${meteor_version_app}"
 
 echo "=> Installing meteor yarn"
 $meteor_bin npm config set registry http://registry.npmjs.org/
-$meteor_bin npm install -g yarn -dd
+$meteor_bin npm install -g yarn -d
 
 echo "=> Executing yarn install"
 $meteor_bin yarn install --production --ignore-engines
@@ -105,8 +105,8 @@ echo "=> Executing Meteor Build..."
 $meteor_bin build \
   --directory $build_dir
 
-echo "=> Executing NPM install within Bundle"
-(cd ${build_dir}/bundle/programs/server/ && npm install -dd)
+echo "=> Executing yarn install within Bundle"
+(cd ${build_dir}/bundle/programs/server/ && $meteor_bin yarn install --ignore-engines)
 
 echo "=> Moving bundle"
 mv ${build_dir}/bundle $HOME/built_app
