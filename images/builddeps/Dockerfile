@@ -9,6 +9,7 @@ RUN apt-get update && apt-get -f install -y && apt-get install -y --no-install-r
     libssl-dev \
     g++ \
     python \
+    git \
   && rm -rf /var/lib/apt/lists/*
 
 RUN ["npm", "install", "--global", "node-gyp", "node-pre-gyp"]
