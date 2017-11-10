@@ -94,6 +94,8 @@ meteor_version_app=$(cat .meteor/release)
 echo "  > ${meteor_version_app}"
 
 echo "=> Installing meteor yarn"
+$meteor_bin npm config delete https-proxy
+$meteor_bin npm config delete http-proxy
 $meteor_bin npm set strict-ssl false
 $meteor_bin npm config set registry http://registry.npmjs.org/
 $meteor_bin npm install -g yarn -dd
